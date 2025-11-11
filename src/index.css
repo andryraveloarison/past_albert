@@ -3,8 +3,11 @@
 :root {
     --dark : #1e1e1e;
     --light : #fefff8;
-    --accent : #fca311;
+    --soft-white: #f5f5f5;
+    --accent : rgb(229 98 69);
     --lausanne-300: "Lausanne-300";
+    --color-dark-grey:#0d0e13;
+
 }
 
 * {
@@ -16,40 +19,47 @@
 
 body {
     font-family: 'DM Sans', sans-serif;
-    background-color: #000;
 }
 
 
 img {
     width: 100%;
-    height: 100%;
+    height: 30vw;
     object-fit: cover;
 }
 
+
+
 h1 {
-    text-transform: uppercase;
-    font-family: "Anton";
-    font-size: 10rem;
-    font-weight: 500;
-    letter-spacing: -0.1rem;
+    font-family: var(--lausanne-300);
+    font-size: 10vw;
+    font-weight: 400;
+    letter-spacing: -0.3472222222vw;
     line-height: 0.9;
+}
+
+
+
+@media (max-width: 750px) {
+
+    img {
+        height: 50vw;
+    }
 }
 
 
 /* Scrollbar track (fond) */
 ::-webkit-scrollbar {
     width: 5px; /* largeur scrollbar */
-    height: 2px; /* hauteur scrollbar horizontale si besoin */
+    height: 8px; /* hauteur scrollbar horizontale si besoin */
   }
 
   /* Scrollbar thumb (partie que l'on fait glisser) */
   ::-webkit-scrollbar-thumb {
     background-color: rgba(214, 214, 214, 0.671); /* couleur violet/indigo par exemple */
-    border-radius: 10px;
   }
 
   /* Scrollbar track background */
   ::-webkit-scrollbar-track {
-    background: rgba(180, 180, 180, 0); /* fond plus sombre */
-    margin-bottom: 18px;
+    background: rgba(182, 5, 5, 0); /* fond plus sombre */
   }

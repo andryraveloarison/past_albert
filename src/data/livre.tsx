@@ -17,4 +17,22 @@ export const LIVRES: Array<{ id: string; titre: string; couverture: string; desc
       "Vivre la grâce au-delà des dimanches: un parcours de 30 méditations.",
     lien: "#",
   },
+    {
+    id: "b3",
+    titre: "La grâce au quotidien",
+    couverture:
+      "https://images.unsplash.com/photo-1458571037713-913d8b481dc6?q=80&w=1200&auto=format&fit=crop",
+    description:
+      "Vivre la grâce au-delà des dimanches: un parcours de 30 méditations.",
+    lien: "#",
+  },
+    {
+    id: "b4",
+    titre: "La grâce au quotidien",
+    couverture:
+      "https://images.unsplash.com/photo-1458571037713-913d8b481dc6?q=80&w=1200&auto=format&fit=crop",
+    description:
+      "Vivre la grâce au-delà des dimanches: un parcours de 30 méditations.",
+    lien: "#",
+  },
 ];

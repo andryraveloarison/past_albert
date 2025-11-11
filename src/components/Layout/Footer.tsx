@@ -1,4 +1,4 @@
-import { BIO } from "../data/bio";
+import { BIO } from "@/data/bio";
 
 export function Footer() {
   return (

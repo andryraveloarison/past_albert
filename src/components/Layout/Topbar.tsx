@@ -1,4 +1,3 @@
-import { BookOpenText, CalendarDays, Church, Home, LibraryBig, Mic2, Quote } from "lucide-react";
 import { NavItem } from "./NavItem";
 import logo from "../assets/logo2.png";
 
@@ -24,18 +23,4 @@ export function Topbar() {
       </div>
     </header>
   );
-}
-
-
-{
-  /*
-          <nav className="hidden items-center gap-1 md:flex ">
-          <NavItem to="/" icon={<Home className="h-4 w-4 text-white" />}>Accueil</NavItem>
-          <NavItem to="/biographie" icon={<BookOpenText className="h-4 w-4" />}>Biographie</NavItem>
-          <NavItem to="/predications" icon={<Mic2 className="h-4 w-4" />}>Prédications</NavItem>
-          <NavItem to="/livres" icon={<LibraryBig className="h-4 w-4" />}>Livres</NavItem>
-          <NavItem to="/resumes" icon={<CalendarDays className="h-4 w-4" />}>Résumés</NavItem>
-          <NavItem to="/verset-semaine" icon={<Quote className="h-4 w-4" />}>Verset</NavItem>
-        </nav>
-  */
 }

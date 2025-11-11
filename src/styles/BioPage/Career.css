@@ -1,0 +1,46 @@
+
+
+
+.career h1 {
+    font-size: 7rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+}
+
+.career p {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.career section {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    color: var(--color-dark-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.career .intro {
+    padding: 0;
+}
+@media (max-width: 1000px) {
+
+    .career section {
+        height: 70svh;
+    }
+    
+    .career h1 {
+        font-size: 2rem;
+        letter-spacing: 0;
+    }
+
+    .career p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+

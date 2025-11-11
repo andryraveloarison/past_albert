@@ -1,0 +1,87 @@
+/* Section principale avec image de fond */
+.bio-header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bio-header-top {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+
+.bio-title {
+    width: 97%;
+    font-size: 18vw;
+    font-family: var(--lausanne-300);
+    color: var(--accent);
+    position: absolute;
+    text-align: center;
+    top: -14vw;
+}
+
+
+
+.bio-header-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 25vh;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.bio-hero {
+  background: url("/bg2.png") center center / cover no-repeat;
+  height: 95vh;
+  width: 100%;
+}
+
+.bio-resume{
+    text-align: start;
+    width: 84%;
+    padding: 5rem 0;
+    font-size: 1.2rem;
+}
+
+
+
+
+@media (max-width: 790px) {
+    .bio-header-top,
+    .bio-title {
+        gap: 0;
+        opacity: 0;
+    }
+
+    .bio-hero {
+        height: 100vh;
+    }
+
+    .bio-header-content {
+        flex-direction: column;
+        margin-top: 0;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        z-index: -10;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .bio-content {
+        background-color: var(--light);
+        margin-top: calc(100vh - 4rem);
+    }
+
+    .bio-resume {
+      position: absolute;
+    }
+ 
+}
+
