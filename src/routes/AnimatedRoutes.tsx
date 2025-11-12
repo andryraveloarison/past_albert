@@ -10,9 +10,9 @@ export function AnimatedRoutes() {
   return (
         <Routes location={location}>
           <Route path="/" element={<HomePage/>} />
-          <Route path="/biographie" element={<BioPage />} />
-          <Route path="/sermons" element={<SermonsPage />} />
-          <Route path="/books" element={<BooksPage />} />
+          <Route path="/bio" element={<BioPage />} />
+          <Route path="/toriteny" element={<SermonsPage />} />
+          <Route path="/fampianarana" element={<BooksPage />} />
         </Routes>
   );
 }

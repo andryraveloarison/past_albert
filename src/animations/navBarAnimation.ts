@@ -15,6 +15,7 @@ export const useMenuAnimation = () => {
   const menuLinksWrapperRef = useRef<HTMLElement | null>(null);
   const linkHighlighterRef = useRef<HTMLElement | null>(null);
   const menuLinksRef = useRef<NodeListOf<Element> | null>(null);
+  const homepageRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     console.log("FIRST");
@@ -29,6 +30,7 @@ export const useMenuAnimation = () => {
     menuLinksWrapperRef.current = document.querySelector(".menu-links-wrapper");
     linkHighlighterRef.current = document.querySelector(".link-highLighter");
     menuLinksRef.current = document.querySelectorAll(".menu-link a");
+    homepageRef.current = document.querySelector(".homepage-content");
 
     if (
       !containerRef.current ||
@@ -36,7 +38,8 @@ export const useMenuAnimation = () => {
       !menuContentRef.current ||
       !menuImageRef.current ||
       !menuLinksWrapperRef.current ||
-      !linkHighlighterRef.current
+      !linkHighlighterRef.current ||
+      !homepageRef.current
     ) {
       console.warn("Certains éléments du menu sont introuvables");
       return;
@@ -72,13 +75,22 @@ export const useMenuAnimation = () => {
     const menuLinks = menuLinksRef.current!;
     const linkHighlighter = linkHighlighterRef.current!;
 
-    // ✅ Ouverture vers le bas
+
+    gsap.to(homepageRef, {
+      rotation: 10,
+      x: 3000,
+      y: 450,
+      scale: 1.5,
+      duration:1.25,
+      ease:"power4.inOut"
+    })
+
     gsap.set(menuOverlay, {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
     });
 
     gsap.to(menuOverlay, {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 175%, 0% 100%)",
       duration: 1.25,
       ease: "expo.out",
       onComplete: () => {
@@ -106,14 +118,14 @@ export const useMenuAnimation = () => {
     const menuLinks = menuLinksRef.current!;
     const linkHighlighter = linkHighlighterRef.current!;
 
-    gsap.to(container, { y: "0%", opacity: 1, duration: 1.25, ease: "expo.out" });
-    gsap.to(menuLinks, { y: "-200%", duration: 1.25, ease: "expo.out" });
-    gsap.to(menuContent, { y: "-100%", opacity: 0.25, duration: 1.25, ease: "expo.out" });
-    gsap.to(menuImage, { y: "-100%", opacity: 0.5, duration: 1.25, ease: "expo.out" });
+    gsap.to(container, { y: "0%", opacity: 1, duration: 1, ease: "expo.out" });
+    gsap.to(menuLinks, { y: "-200%", duration: 1, ease: "expo.out" });
+    gsap.to(menuContent, { y: "-100%", opacity: 0.25, duration: 1, ease: "expo.out" });
+    gsap.to(menuImage, {y: "-100%", opacity: 0, duration: 0.80, ease: "expo.out" });
 
     gsap.to(menuOverlay, {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-      duration: 1.25,
+      duration: 1,
       ease: "expo.out",
       onComplete: () => {
         gsap.to(menuOverlay, {

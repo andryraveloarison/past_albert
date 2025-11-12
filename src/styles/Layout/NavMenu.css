@@ -1,14 +1,40 @@
-
-p.a {
+.menu-link a {
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: 600;
-    line-height: 1;
-    user-select: none;
+    position: relative;
+    color: var(--light);
+    font-family: "Anton";
+    font-weight: 500;
+    letter-spacing: 0.02rem;
+    display: inline-block;
+    overflow: visible;
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
 }
 
+/* la ligne sous le lien */
+.menu-link a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; 
+  width: 100%;
+  height: 2px;
+  background-color: white; 
+  transform: scaleX(0);
+  transform-origin: left; 
+  transition: transform 0.4s ease;
+}
 
+/* effet au hover */
+.menu-link a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left; 
+}
+
+/* effet inverse à la sortie */
+.menu-link a:not(:hover)::after {
+  transform-origin: right; 
+}
 
 section {
     position: relative;
@@ -21,8 +47,6 @@ section {
     color: var(--dark);
     padding: 2rem;
 }
-
-
 
 nav{
     position: fixed;
@@ -81,11 +105,7 @@ nav p {
 }
 
 .menu-img {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 150px;
+    width: 29vw;
     will-change: transform, opacity;
 }
 
@@ -95,17 +115,6 @@ nav p {
     width: 100%;
 }
 
-.menu-links-wrapper {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: max-content;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    will-change: transform;
-}
 
 
 .menu-link {
@@ -114,45 +123,38 @@ nav p {
     overflow: hidden;
 }
 
-.menu-link a {
-    position: relative;
-    color: var(--light);
-    font-family: "Anton";
-    font-size: 10rem;
-    font-weight: 500;
-    letter-spacing: -0.02rem;
-    display: inline-block;
-    overflow: hidden;
-}
-
-
-.menu-link a span:nth-child(2) {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.link-highlighter {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 400px;
-    height: 0.75rem;
-    background-color: var(--accent);
-    will-change: transform, width;
-}
 
 
 .menu-overlay {
     clip-path: polygon(0% 100%, 100% 100%, 100% 100% , 0% 100%);
 }
 
+.menu-items{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
 
-.char {
-    position: relative;
-    display: inline-block;
-    will-change: transform; 
 }
+ .menu-link {
+    padding-bottom: 6px;
+    clip-path: polygon(0 0 , 100% 0, 100% 100%, 0% 100%);
+}
+
+
+
+
+.menu-footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.menu-footer .col-sm {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 
 @media (max-width: 1000px) {
@@ -176,7 +178,12 @@ nav p {
     }
 
     .menu-link a {
-        font-size: 4rem;
+        font-size: 3rem;
         letter-spacing: 0;
+    }
+
+    .menu-items {
+        justify-content: start;
+        padding: 1rem;
     }
 }

@@ -9,11 +9,14 @@ export default function HomePage() {
   return (
     <>
       <NavMenu color='light'/>
+      <span className='homepage-content'>
       <Hero />
       <Intro />
       <ResumeBio />
       <ResumeWorks />
       <Footer />
+      </span>
+
     </>
   );
 }

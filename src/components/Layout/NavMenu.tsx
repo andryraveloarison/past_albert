@@ -1,7 +1,7 @@
 // src/components/NavMenu.tsx
 import { useMenuAnimation } from "@/animations/navBarAnimation";
 import logo from "@/assets/logo2.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "@/styles/Layout/NavMenu.css";
 
 type NavMenuProps = {
@@ -20,72 +20,42 @@ export default function NavMenu({ color = "light" }: NavMenuProps) {
     setMenuState(!menuState);
   };
 
+  useEffect(() => {
+    closeMenu();
+  }, []);
+
   return (
     <>
       <nav className={`nav ${(color === "dark" && !menuState) ? "nav-dark" : "nav-light"}`}>
         <div className="nav-toogle">
           <p>{menuState ? "Past RAVELOARISON" : "Logo"}</p>
         </div>
-
         <div className="nav-toogle" onClick={handleToggle}>
           <p>{menuState ? "Fermer" : "Menu"}</p>
         </div>
       </nav>
 
       <div className="menu-overlay">
-        <div className="menu-content">
-          <div className="menu-col">
-            <p>Codegride</p>
-            <p>Codegride</p>
-            <p>Codegride</p>
-            <br />
-            <p>Codegride</p>
-            <p>Codegride</p>
-            <br />
-            <p>Codegride</p>
-            <p>Codegride</p>
-            <br />
-            <p>Codegride</p>
-            <p>Codegride</p>
+          <div className="menu-items">
+            <img src={logo} alt="logo" className="menu-img" />
+            <div className="col-sm">
+              <div className="menu-links">
+                <div className="menu-link">
+                  <a href="/">Accueil</a>
+                </div>
+                <div className="menu-link">
+                  <a href="/bio">Biographie</a>
+                </div>
+                <div className="menu-link">
+                  <a href="/toriteny">Toriteny</a>
+                </div>
+                <div className="menu-link">
+                  <a href="/fampianarana" >Fampianarana</a>
+                </div>
+              </div>
+            </div>
+            </div>
           </div>
-        </div>
-
-        <div className="menu-img">
-          <img src={logo} alt="logo" className="menu-logo" />
-        </div>
-
-        <div className="menu-links-wrapper">
-          <div className="menu-link">
-            <a>
-              <span>Follow us on</span>
-              <span>Twitter</span>
-            </a>
-          </div>
-
-          <div className="menu-link">
-            <a>
-              <span>Follow us on</span>
-              <span>LinkedIn</span>
-            </a>
-          </div>
-
-          <div className="menu-link">
-            <a>
-              <span>Follow us on</span>
-              <span>Instagram</span>
-            </a>
-          </div>
-
-          <div className="menu-link">
-            <a>
-              <span>Follow us on</span>
-              <span>GitHub</span>
-            </a>
-          </div>
-
-          <div className="link-highLighter"></div>
-        </div>
-      </div>
     </>
   );
 }
