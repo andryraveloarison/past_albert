@@ -10,11 +10,11 @@ export default function HomePage() {
     <>
       <NavMenu color='light'/>
       <span className='homepage-content'>
-      <Hero />
-      <Intro />
-      <ResumeBio />
-      <ResumeWorks />
-      <Footer />
+        <Hero />
+        <Intro />
+        <ResumeBio />
+        <ResumeWorks />
+        <Footer />
       </span>
 
     </>

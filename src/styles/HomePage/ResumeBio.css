@@ -2,45 +2,72 @@
 /* Section principale avec image de fond */
 .resume-bio {
   position: relative;
-  height: 100vh;
+  height: 180svh;
   width: 100%;
-  /* background: url("/photo1.jpeg") center center / cover no-repeat; */
-  background-color: red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  gap: 2rem;
+  margin-bottom: 8rem;
 }
 
-/* Superposition dégradée */
-.overlay {
+
+/* 🎨 Image de fond floue */
+.resume-bio::before {
+  content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 30%, #0b1020);
+  inset: 0; /* équivaut à top:0; right:0; bottom:0; left:0; */
+  background: url("/profile.png") center center / cover no-repeat;
+  filter: blur(3px); /* flou de l’image */
+  transform: scale(1.1); /* léger zoom pour éviter les bords visibles après flou */
+  z-index: 0;
+}
+
+/* ✅ Contenu au-dessus */
+.resume-bio > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.resume-bio-img {
+    width: 20vw;
+    height: 25vw;
+    min-width: 17rem;
+    min-height: 20rem;
 }
 
 /* Contenu principal */
 .resume-bio-content {
   position: relative;
   z-index: 2;
-  margin: 0 auto;
-  padding: 4vh 4vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 100%;
-  color: white;
   transition: transform 0.2s ease-out;
 }
 
 .resume-bio-title-block {
     display: flex;
     flex-direction: column;
+    width: 30vw;
     color: var(--light);
 }
 
-.resume-bio-title-block h1 {
-  font-size: 10vw;
-  margin: 0;
+
+
+.verset-title {
+    font-size: 3vw;
+    margin-bottom: 2vh;
+  color: var(--dark);
 }
 
+.verset-content {
+    font-size: 1.5vw;
+  color: var(--dark);
+}
 
 @keyframes bounce {
   0%, 100% {
@@ -59,11 +86,48 @@
   text-align: center;
 }
 
+@media (max-width: 1000px) {
+
+    .resume-bio {
+        height: 130svh;
+    }
+
+        .verset-title {
+        font-size: 1.5rem;
+    }
+
+    .verset-content {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .resume-bio {
+        height: 110svh;
+        margin-bottom: 2rem;
+
+    }
+
+    
+}
 
 
 @media (max-width: 600px) {
+  .resume-bio::before {
+      background: var(--color-light-grey);
+  }
 
     .resume-bio-title-block h1 {
         font-size: 16vw;
+    }
+
+    .resume-bio {
+        height: 100svh;
+        flex-direction: column-reverse;
+    }
+
+    .resume-bio-title-block{
+        width: 80vw;
     }
 }

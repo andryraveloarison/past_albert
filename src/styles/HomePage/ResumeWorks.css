@@ -17,6 +17,7 @@
   align-items: center;
   gap: 1rem;
   padding: 1.5rem;
+  margin-top: 7rem;
 }
 
 .resume-sermons-second-title {
@@ -31,11 +32,8 @@
   background-color: #000;
   width: 0; /* commence cachée */
   border-radius: 2px;
-  /* Important : make sure width % is meaningful */
   display: block;
   max-width: 100%;
-  /* If using flex, do not rely only on flex-grow for width animation.
-     Keep flex-basis: auto so percentage width works relative to parent. */
   flex: 0 1 auto;
 }
 
@@ -96,6 +94,11 @@
 
 
 @media (max-width: 750px) {
+
+    .resume-sermons{
+        height: 66svh;
+    }
+
     .resume-sermons h1 {
         width: 100%;
     }
@@ -111,6 +114,11 @@
     .book-row {
         flex-direction: column;
     }
+
+
+    .resume-sermons-second-container {
+      margin-top: 3rem;
+}
 }
 
 

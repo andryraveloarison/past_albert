@@ -37,9 +37,11 @@
 }
 
 .bio-hero {
-  background: url("/bg2.png") center center / cover no-repeat;
-  height: 95vh;
+  background: url("/bio-bg.jpeg") center center / cover no-repeat;
+  height: 125vh;
+  max-height: 650px;
   width: 100%;
+
 }
 
 .bio-resume{
@@ -47,6 +49,16 @@
     width: 84%;
     padding: 5rem 0;
     font-size: 1.2rem;
+}
+
+.bio-hero.white-bg {
+  background: #fff !important; /* fond blanc */
+  transition: background 0.3s ease;
+}
+
+.bio-resume.resume-hidden {
+  opacity: 0 !important;
+  transition: 0.3s ease;
 }
 
 
@@ -60,7 +72,8 @@
     }
 
     .bio-hero {
-        height: 100vh;
+        width: 84%;
+        max-height: unset;
     }
 
     .bio-header-content {
@@ -72,16 +85,30 @@
         z-index: -10;
         height: 100vh;
         width: 100%;
+        align-items: center;
+        padding: 2rem;
     }
 
     .bio-content {
         background-color: var(--light);
-        margin-top: calc(100vh - 4rem);
+        margin-top: calc(100vh);
     }
 
     .bio-resume {
       position: absolute;
+
     }
  
 }
 
+
+
+@media (max-width: 690px) {
+    .bio-hero {
+        width: 100%;
+    }
+
+    .bio-header-content {
+        padding: 0;
+    }
+}

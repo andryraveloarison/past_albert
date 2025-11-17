@@ -1,38 +1,19 @@
-import { useEffect } from "react";
 import "@/styles/HomePage/ResumeBio.css";
+import photo from "@/assets/profile.png";
 
 export default function ResumeBio() {
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-
-      const textContainer = document.querySelector(".resume-bio-content") as HTMLElement | null;
-      const background = document.querySelector(".resume-bio") as HTMLElement | null;
-
-      // Parallaxe : le texte monte légèrement quand on scrolle
-      if (textContainer) {
-        textContainer.style.transform = `translateY(${scrollY * -0.5}px)`;
-      }
-
-      // L’image de fond bouge lentement (effet profondeur)
-      if (background) {
-        background.style.backgroundPositionY = `${scrollY * 0.25}px`;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+ 
 
   return (
     <header className="resume-bio">
-      <div className="overlay"></div>
-
       <div className="resume-bio-content">
         <div className="resume-bio-title-block">
-          <h1>Pastora</h1>
-          <h1>Raveloarison</h1>
+          <p className="verset-title">Heb 5-25</p>
+          <p className="verset-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate esse voluptatibus deserunt eligendi, ad deleniti odit harum, cumque ratione sunt provident exercitationem mollitia incidunt quaerat! Quasi ipsam deserunt animi numquam.</p>
         </div>
+      </div>
+      <div className="overlay">
+          <img src={photo} alt="photo" className="resume-bio-img" />
       </div>
     </header>
   );

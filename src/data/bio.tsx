@@ -1,46 +1,51 @@
-import { desc } from "framer-motion/client";
+import photoFLMAnkatso from "@/assets/ankatso.jpg";
+import photoFlmIvato from "@/assets/ivato.jpg";
+import photoFlmTsarahonenana from "@/assets/tsarahonenana.jpg";
+import photoFLM67ha from "@/assets/67ha.jpg";
+import photoMorafeno from "@/assets/morafeno.jpg"
 
 export const BIO = {
   nom: "RAVELOARISON Albert",
   titre: "Pasteur principal & enseignant biblique",
-  photo:
-    "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop",
+  photo: photoFLMAnkatso, // image principale
   famille:
-    "Marié à Lalao depuis 2002, 3 enfants: Hery, Fara et Mamy. Famille engagée dans le ministère de louange et l'accompagnement des couples.",
+    "Pastora Raveloarison Albert sy Ramatoa Fara vadiny dia nanomboka nanao ny asa Pastoraly nanomboka ny taona 1999 ka atramin'izao.",
   historiqueEglises: [
       { 
-      annee: "2015-2025", 
-      eglise: "FLM Ankatso", 
-      role: "Pasteur assistant",  
-      description:"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
-      photo: 
-      "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop"  
+      annee: "1999-2003", 
+      eglise: "FLM Morafeno Avaratra", 
+      role: "Pastora",  
+      description: "Tao amin'ny Fitandremana Morafeno Avaratra, Tsiroanomandidy izy ireo no nanomboko ny asa fanompoana amin'ny maha pastora.",
+      photo: photoMorafeno
     },
     { 
-      annee: "2000-2005", 
+      annee: "2028-2019", 
+      eglise: "FLM Ambolokandrina", 
+      role: "Pastora",  
+      description: "Nanatanteraka ny asa fanompoana tao amin'ny FLM Ambolokandrina Ankatso.",
+      photo: photoFLMAnkatso
+    },
+    { 
+      annee: "2008-2012", 
       eglise: "Flm Ivato", 
-      role: "Pasteur assistant",  
-      description:"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
-      photo: 
-      "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop"  
+      role: "Pastora",  
+      description: "MPitondra fitandremana Ivato famonjena nanomboka ny... ",
+      photo: photoFlmIvato
     },
-        { 
-      annee: "2006-2015", 
+    { 
+      annee: "2013-2023", 
       eglise: "Flm Tsarahonenana", 
-      role: "Pasteur assistant", 
-      description:"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
-      photo: 
-      "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop"  
+      role: "Mpitondra fileovana",  
+      description: "Nitondra ny Fileovan'ny Tsarahonenana nanomboka ny taona...",
+      photo: photoFlmTsarahonenana
     },
-        { 
-      annee: "2015-2025", 
+    { 
+      annee: "okat 2023 - ", 
       eglise: "FLM 67ha", 
-      role: "Pasteur assistant",  
-      description:"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
-      photo: 
-      "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop"  
+      role: "Mpitondra fileovana",  
+      description: "Mpitondra ny fileovan'ny Fahamarinana 67ha izy ankehitriny.",
+      photo: photoFLM67ha
     },
-],
-  vision:
-    "Annoncer l'Évangile, former des disciples et bâtir des familles solides, empreintes d'amour, de foi et d'espérance.",
+  ],
+  vision: "Annoncer l'Évangile, former des disciples et bâtir des familles solides, empreintes d'amour, de foi et d'espérance.",
 };

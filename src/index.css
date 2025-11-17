@@ -7,7 +7,10 @@
     --accent : rgb(229 98 69);
     --lausanne-300: "Lausanne-300";
     --color-dark-grey:#0d0e13;
-
+    --color-light-grey:#dbdbdb;
+    --card-1: #b2b2b2;
+    --card-2: #ce2017;
+    --card-3: #2f2f2f;
 }
 
 * {
