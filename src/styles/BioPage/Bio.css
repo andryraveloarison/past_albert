@@ -96,12 +96,9 @@
 
     .bio-resume {
       position: absolute;
-
     }
  
 }
-
-
 
 @media (max-width: 690px) {
     .bio-hero {

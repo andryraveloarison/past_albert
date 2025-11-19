@@ -29,7 +29,7 @@ export const BIO = {
       annee: "2008-2012", 
       eglise: "Flm Ivato", 
       role: "Pastora",  
-      description: "MPitondra fitandremana Ivato famonjena nanomboka ny... ",
+      description: "Nitondra ny fitandremana Ivato famonjena nanomboka ny... ",
       photo: photoFlmIvato
     },
     { 
@@ -43,7 +43,7 @@ export const BIO = {
       annee: "okat 2023 - ", 
       eglise: "FLM 67ha", 
       role: "Mpitondra fileovana",  
-      description: "Mpitondra ny fileovan'ny Fahamarinana 67ha izy ankehitriny.",
+      description: "Mitondra ny fileovan'ny Fahamarinana 67ha izy ankehitriny.",
       photo: photoFLM67ha
     },
   ],

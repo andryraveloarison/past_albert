@@ -2,9 +2,17 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import photo from "@/assets/profile.png";
+import zo from "@/assets/zo.jpeg";
+import andry from "@/assets/andry2.jpeg"
+
 import "@/styles/BioPage/Family.css";
 
 export default function Family() {
+
+  const imageLists = [
+    { index: "01", photo: photo, name: "Sitraka"}, 
+    { index: "03", photo: andry, name: "Andry"},
+    { index: "02", photo: zo, name: "Henitsoa"} ]
 
 useEffect(() => {
   gsap.registerPlugin(ScrollTrigger);
@@ -59,11 +67,11 @@ useEffect(() => {
           {[1, 2, 3].map((n) => (
             <div className="family-card" key={n} id={"family-card-" + n}>
               <div className="family-card-front">
-                <img src={photo} alt="photo" className="resume-bio-img" />
+                <img src={imageLists[n-1].photo} alt="photo" className="resume-bio-img" />
               </div>
               <div className="family-card-back">
-                <span>{`0${n}`}</span>
-                <p>{n === 1 ? "Premier" : n === 2 ? "Faharoa" : "Fahatelo"}</p>
+                <span>{imageLists[n-1].index}</span>
+                <p>{imageLists[n-1].name}</p>
               </div>
             </div>
           ))}

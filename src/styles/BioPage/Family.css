@@ -75,6 +75,10 @@
     line-height: 1.1;
 }
 
+.family-card-back p {
+  font-size: 1.5rem;
+}
+
 
 @media (max-width: 1000px) {
     .family-intro h1 {
@@ -105,10 +109,10 @@
      height: 40svh;
   }
 
-      .family-card {
-    width: 280px;
-    height: 168px;
-  }
+    .family-card {
+        width: 280px;
+        height: 30vh;
+    }
   
 }
 
