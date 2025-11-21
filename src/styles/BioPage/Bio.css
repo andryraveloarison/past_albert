@@ -83,7 +83,7 @@
         position: fixed;
         top: 0;
         z-index: -10;
-        height: 100vh;
+        height: 100svh;
         width: 100%;
         align-items: center;
         padding: 2rem;

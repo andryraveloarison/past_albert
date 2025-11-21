@@ -7,7 +7,7 @@ export function Footer() {
         <a className="footer-copyright">© {new Date().getFullYear()} │ {BIO.nom}</a>
         <div className="footer-contact">
         <a href="mailto:alberavelo@gmail.com" className="footer-email">
-          alberavelo@gmail.com
+          alberavelo20@gmail.com
         </a>
         </div>
     </footer>
