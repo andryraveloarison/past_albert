@@ -1,4 +1,3 @@
-import { LIVRES } from "@/data/livre";
 import "@/styles/HomePage/ResumeWorks.css";
 import { useEffect, useRef, type RefObject } from "react";
 import { gsap } from "gsap";

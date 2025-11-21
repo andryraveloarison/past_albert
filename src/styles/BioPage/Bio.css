@@ -39,7 +39,7 @@
 .bio-hero {
   background: url("/bio-bg.jpeg") center center / cover no-repeat;
   height: 125vh;
-  max-height: 650px;
+  max-height: 750px;
   width: 100%;
 
 }

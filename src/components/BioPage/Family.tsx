@@ -1,16 +1,16 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import photo from "@/assets/profile.png";
 import zo from "@/assets/zo.jpeg";
 import andry from "@/assets/andry2.jpeg"
+import sitraka from "@/assets/sitraka.jpeg"
 
 import "@/styles/BioPage/Family.css";
 
 export default function Family() {
 
   const imageLists = [
-    { index: "01", photo: photo, name: "Sitraka"}, 
+    { index: "01", photo: sitraka, name: "Sitraka"}, 
     { index: "03", photo: andry, name: "Andry"},
     { index: "02", photo: zo, name: "Henitsoa"} ]
 
@@ -20,7 +20,6 @@ useEffect(() => {
   const ctx = gsap.context(() => {
     const zafi = document.querySelector(".zafi");
     gsap.set(zafi, { opacity: 0, y: 80 });
-
     const cards = gsap.utils.toArray(".family-card");
 
     // Timeline animée par le scroll
@@ -48,11 +47,6 @@ useEffect(() => {
 
   return () => ctx.revert();
 }, []);
-
-
-
-
-
 
   return (
     <div className="family">
