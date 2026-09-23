@@ -12,8 +12,8 @@ export default function Intro() {
         
       </section>
       <div className="intro-second-container">
-        <h3 className="intro-second-title">* Tanjona</h3>
-        <p className="intro-p">Ity pejy ity dia .. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptate dolore quidem aliquid neque quas a officiis animi blanditiis deserunt, placeat voluptas. Sunt quisquam reiciendis, adipisci nihil eligendi omnis vero..</p>
+        <h3 className="intro-second-title">Albert RAVELOARISON</h3>
+        <p className="intro-p">Pasteur de l'Église Luthérienne Malagasy depuis 1999 et titulaire d'une maîtrise en théologie (SALT Fianarantsoa), j'ai exercé plus de vingt-cinq ans de ministère, d'abord en paroisse puis à la tête de districts. Attaché à la prédication, à l'enseignement biblique et à l'accompagnement des fidèles, je mets mon expérience au service de l'unité et de la croissance de l'Église.</p>
       </div>
     </div>
   );

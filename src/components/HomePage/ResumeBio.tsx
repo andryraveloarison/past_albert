@@ -8,8 +8,8 @@ export default function ResumeBio() {
     <header className="resume-bio">
       <div className="resume-bio-content">
         <div className="resume-bio-title-block">
-          <p className="verset-title">Heb 5-25</p>
-          <p className="verset-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate esse voluptatibus deserunt eligendi, ad deleniti odit harum, cumque ratione sunt provident exercitationem mollitia incidunt quaerat! Quasi ipsam deserunt animi numquam.</p>
+          <p className="verset-title">2 Timothée 4:2</p>
+          <p className="verset-content">« Prêche la parole, insiste en toute occasion, favorable ou non, reprends, censure, exhorte, avec toute douceur et en instruisant. »</p>
         </div>
       </div>
       <div className="overlay">

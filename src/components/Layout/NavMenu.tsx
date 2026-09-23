@@ -70,12 +70,12 @@ export default function NavMenu({ color }: NavMenuProps) {
             <div className="nav-link">
               <a href="/bio" className={`link-${color}`}>Biographie</a>
             </div>
-            <div className="nav-link">
+            {/* <div className="nav-link">
               <a href="/toriteny" className={`link-${color}`}>Toriteny</a>
             </div>
             <div className="nav-link">
               <a href="/fampianarana" className={`link-${color}`}>Fampianarana</a>
-            </div>
+            </div> */}
           </div>
 
           <div
@@ -97,8 +97,8 @@ export default function NavMenu({ color }: NavMenuProps) {
             <div className="menu-links">
               <div className="menu-link"><a href="/">Accueil</a></div>
               <div className="menu-link"><a href="/bio">Biographie</a></div>
-              <div className="menu-link"><a href="/toriteny">Toriteny</a></div>
-              <div className="menu-link"><a href="/fampianarana">Fampianarana</a></div>
+              {/* <div className="menu-link"><a href="/toriteny">Toriteny</a></div>
+              <div className="menu-link"><a href="/fampianarana">Fampianarana</a></div> */}
             </div>
           </div>
         </div>
