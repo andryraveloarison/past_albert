@@ -38,7 +38,10 @@ export default function Header() {
         <div className="bio-header-content">
           <p className="bio-title">Raveloarison</p>
           <div className="bio-hero" />
-          <p className="bio-resume">{BIO.famille} </p>
+          <div className="bio-resume">
+            <span className="bio-resume-label">Pastora & Ramatoa</span>
+            <p>{BIO.famille}</p>
+          </div>
         </div>
       </header>
   );
