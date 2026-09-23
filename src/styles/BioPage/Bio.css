@@ -37,9 +37,9 @@
 }
 
 .bio-hero {
-  background: url("/bio-bg.jpeg") center center / cover no-repeat;
-  height: 125vh;
-  max-height: 750px;
+  background: url("/bio-bg.jpeg") center top / cover no-repeat;
+  /* La hauteur suit la largeur de l'écran pour garder les visages visibles */
+  height: clamp(420px, 55vw, 750px);
   width: 100%;
 
 }
@@ -73,7 +73,8 @@
 
     .bio-hero {
         width: 84%;
-        max-height: unset;
+        height: 100%;
+        background-position: center 20%;
     }
 
     .bio-header-content {
