@@ -19,7 +19,7 @@ export const BIO = {
       photo: photoMorafeno
     },
     { 
-      annee: "2028-2019", 
+      annee: "2003-2005", 
       eglise: "FLM Ambolokandrina", 
       role: "Pastora",  
       description: "Nanatanteraka ny asa fanompoana tao amin'ny FLM Ambolokandrina Ankatso.",
@@ -40,7 +40,7 @@ export const BIO = {
       photo: photoFlmTsarahonenana
     },
     { 
-      annee: "okat 2023 - ", 
+      annee: "2023 - ", 
       eglise: "FLM 67ha", 
       role: "Mpitondra fileovana",  
       description: "Mitondra ny fileovan'ny Fahamarinana 67ha izy ankehitriny.",
